@@ -52,7 +52,9 @@ jobs:
           install -m 0755 target/release/paperseal dist/paperseal/
           install -m 0755 target/release/paperseal-cli dist/paperseal/
           install -m 0644 README.md dist/paperseal/
-          install -m 0644 LICENSE dist/paperseal/
+          if [[ -f LICENSE ]]; then
+            install -m 0644 LICENSE dist/paperseal/
+          fi
 
           archive="paperseal-linux-x86_64-${RELEASE_TAG}.tar.gz"
           tar -C dist -czf "dist/${archive}" paperseal

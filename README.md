@@ -81,7 +81,7 @@ The command prints the generated page IDs after success. Keep a record of those 
 
 ## GitHub releases
 
-The workflow in `.github/workflows/release.yml` builds Linux x86_64 binaries and uploads a tarball plus SHA-256 checksum to the matching GitHub release. The archive contains both executables, this README, and the MIT license. It runs when a version tag with or without a leading `v` is pushed to GitHub and can also be started manually from the GitHub Actions tab by entering an existing tag. The workflow uses GitHub's automatic `GITHUB_TOKEN`; the repository must allow Actions to write contents/releases. The release archive requires GTK 4 and Cairo runtime libraries for the GUI program.
+The workflow in `.github/workflows/release.yml` builds Linux x86_64 binaries and uploads a tarball plus SHA-256 checksum to the matching GitHub release. The archive contains both executables and this README, plus the MIT license when it exists at the tagged revision. It runs when a version tag with or without a leading `v` is pushed to GitHub and can also be started manually from the GitHub Actions tab by entering an existing tag. The workflow uses GitHub's automatic `GITHUB_TOKEN`; the repository must allow Actions to write contents/releases. The release archive requires GTK 4 and Cairo runtime libraries for the GUI program.
 
 ## Printing and design notes
 
